@@ -60,5 +60,5 @@ class ThorlabsPowermeter(PowerMeter, VisaInstrument):
 
 if __name__ == '__main__':
     import pyvisa as visa
-    pm = ThorlabsPowermeter(visa.ResourceManager().list_resources()[0])
+    pm = ThorlabsPowermeter(visa.ResourceManager('@py').list_resources()[0])
     pm.show_gui(blocking = False)
